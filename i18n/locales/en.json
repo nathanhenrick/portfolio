@@ -1,0 +1,106 @@
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "loading": "Loading..."
+  },
+
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "menu": "Open menu",
+    "theme_light": "Switch to light theme",
+    "theme_dark": "Switch to dark theme"
+  },
+
+  "home": {
+    "title": "Portfolio",
+    "subtitle1": "Developer",
+    "subtitle2": "Full Stack",
+    "cta": "View projects"
+  },
+
+  "about": {
+    "title": "About",
+    "description1_part1": "I'm Nathan Henrick, a ",
+    "description1_highlight": "Full Stack",
+    "description1_part2": " developer working across the whole web application lifecycle, from front-end to back-end. I enjoy building ",
+    "description1_highlight2": "responsive and scalable web applications",
+    "description1_part3": ", always striving to deliver efficient, well-crafted solutions.",
+
+    "description2_part1": "Currently, I'm studying Systems Analysis and Development ",
+    "description2_highlight1": "(ADS)",
+    "description2_part2": " at UNINTER and participating in projects that combine ",
+    "description2_highlight2": "design, performance and purpose",
+    "description2_part3": ", focusing on creating and applying solutions that truly generate impact.",
+    "photo_alt": "Photo of Nathan Henrick"
+  },
+
+  "experience": {
+    "title": "Experience",
+    "skills": "Skills",
+    "centrion": {
+      "company": "Centrion Web",
+      "location": "Remote",
+      "fullstack": {
+        "period": "Oct 2025 — Present",
+        "title": "Junior Full Stack Developer",
+        "type": "Full-time",
+        "description": "End-to-end development of web applications, from front-end to back-end, including APIs, business rules and integration between layers. Responsible for implementing new features, maintaining existing systems and collaborating on interface design, ensuring code quality and proper versioning.",
+        "skills": [
+          "Vue.js",
+          "Nuxt",
+          "React Native",
+          "Laravel",
+          "MySQL"
+        ]
+      },
+      "intern": {
+        "period": "Apr 2025 — Oct 2025",
+        "title": "Front-end Intern",
+        "type": "Internship · Umuarama, PR, Brazil",
+        "description": "Web application development, taking part in maintaining and building complete features and integrating the front-end with the back-end. Also contributed to the visual organization of interfaces.",
+        "skills": [
+          "Vue.js",
+          "Nuxt",
+          "Laravel",
+          "MySQL",
+          "Figma"
+        ]
+      }
+    }
+  },
+
+  "projects": {
+    "title": "Projects",
+    "cta": "See more on GitHub",
+    "climatiza": {
+      "alt": "Climatiza website home page",
+      "description_part1": "Institutional website and management system for",
+      "description_part2": ", an air conditioning and refrigeration company in Umuarama, Brazil. I built the project end to end: Nuxt front-end and Laravel API, with an admin panel that manages all of the site's content and the company's operations.",
+      "item1": "Website with catalog, services, portfolio, blog and a BTU calculator, optimized for SEO",
+      "item2": "Service orders, customers, finances, commissions and reports with charts",
+      "item3": "Service invoice (NFS-e) issuing through Brazil's national API, with A1 certificate and queue processing",
+      "item4": "Automated tests with PHPUnit and Playwright"
+    },
+    "tech": "Technologies used"
+  },
+
+  "contact": {
+    "title": "Contact",
+    "description": "Have a project, a job opening or just want to chat? Reach me through any of the channels below.",
+    "whatsapp": "Send a message",
+    "resume": "Download resume"
+  },
+
+  "seo": {
+    "description": "Portfolio of Nathan Henrick, Full Stack developer working with Vue, Nuxt and Laravel. Projects, experience and contact."
+  },
+
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

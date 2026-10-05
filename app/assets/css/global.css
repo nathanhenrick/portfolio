@@ -1,0 +1,117 @@
+:root {
+  --primary: rgb(88, 72, 229);
+  --primary-rgb: 88, 72, 229;
+  --secondary: rgb(146, 134, 255);
+  --dark: rgb(15, 16, 16);
+  --dark-rgb: 15, 16, 16;
+  --white: rgb(247, 247, 247);
+
+  /* Cores do tema (escuro por padrão). Use estas, e não --dark/--white,
+     para fundo e texto que devem trocar com o tema. */
+  --bg: var(--dark);
+  --bg-rgb: var(--dark-rgb);
+  --fg: var(--white);
+  --fg-rgb: 247, 247, 247;
+  --muted: rgb(209, 213, 219);
+}
+
+/* Tema claro (classe aplicada no <html> pelo @nuxtjs/color-mode) */
+html.light {
+  --secondary: rgb(72, 56, 200);
+  --bg: var(--white);
+  --bg-rgb: 247, 247, 247;
+  --fg: var(--dark);
+  --fg-rgb: var(--dark-rgb);
+  --muted: rgb(75, 85, 99);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+a.link {
+  color: var(--secondary);
+  text-decoration: underline;
+  transition: .3s ease-in-out;
+}
+
+/* Cor do texto no hover: o cursor inverte as cores e roxo invertido ficaria verde */
+a.link:hover {
+  color: var(--bg);
+  background-color: var(--fg);
+}
+
+ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+ul.list li:before {
+  content: ">"; 
+  color: var(--secondary);
+  display: inline-block;
+  width: 1em;
+  margin-left: 1rem;
+}
+
+.project-cover {
+  max-width: 20rem;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+*::selection {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+body {
+  font-family: "Tomorrow", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--fg);
+
+  background: var(--bg);
+  background-image: radial-gradient(rgba(var(--primary-rgb), 0.2) 1px , transparent 0);
+  background-size: 40px 40px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/** Chromium **/
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--fg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+
+/** Firefox **/
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--fg);
+}
+
+/* Animação ao rolar (diretiva v-reveal em plugins/reveal.ts) */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  /* Atraso (v-reveal="ms") só ao aparecer; ao sair esconde na hora */
+  transition-delay: var(--reveal-delay, 0s);
+}

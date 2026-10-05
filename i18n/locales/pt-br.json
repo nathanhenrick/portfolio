@@ -1,0 +1,106 @@
+{
+  "common": {
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "loading": "Carregando..."
+  },
+
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "experience": "Experiência",
+    "projects": "Projetos",
+    "contact": "Contato",
+    "menu": "Abrir menu",
+    "theme_light": "Mudar para o tema claro",
+    "theme_dark": "Mudar para o tema escuro"
+  },
+
+  "home": {
+    "title": "Portfólio",
+    "subtitle1": "Desenvolvedor",
+    "subtitle2": "Full Stack",
+    "cta": "Ver projetos"
+  },
+
+  "about": {
+    "title": "Sobre",
+    "description1_part1": "Sou Nathan Henrick, desenvolvedor ",
+    "description1_highlight": "Full Stack",
+    "description1_part2": " com experiência no ciclo completo de aplicações web, do front-end ao back-end. Gosto de construir ",
+    "description1_highlight2": "aplicações web responsivas e escaláveis",
+    "description1_part3": ", sempre buscando entregar soluções eficientes e bem-feitas.",
+
+    "description2_part1": "Atualmente, curso Análise e Desenvolvimento de Sistemas ",
+    "description2_highlight1": "(ADS)",
+    "description2_part2": " na UNINTER e participo de projetos que unem ",
+    "description2_highlight2": "design, performance e propósito",
+    "description2_part3": ", focando em criar e aplicar para entregar soluções que realmente gerem impacto.",
+    "photo_alt": "Foto de Nathan Henrick"
+  },
+
+  "experience": {
+    "title": "Experiência",
+    "skills": "Competências",
+    "centrion": {
+      "company": "Centrion Web",
+      "location": "Remoto",
+      "fullstack": {
+        "period": "Out 2025 — Atual",
+        "title": "Desenvolvedor Full Stack Júnior",
+        "type": "Tempo integral",
+        "description": "Atuação no desenvolvimento completo de aplicações web, do front-end ao back-end, incluindo APIs, regras de negócio e integração entre as camadas. Responsável pela implementação de novas funcionalidades, manutenção de sistemas existentes e colaboração no design de interfaces, garantindo qualidade de código e versionamento adequado.",
+        "skills": [
+          "Vue.js",
+          "Nuxt",
+          "React Native",
+          "Laravel",
+          "MySQL"
+        ]
+      },
+      "intern": {
+        "period": "Abr 2025 — Out 2025",
+        "title": "Estagiário Front-end",
+        "type": "Estágio · Umuarama, PR",
+        "description": "Desenvolvimento de aplicações web, participando da manutenção e criação de funcionalidades completas e da integração do front-end com o back-end. Também contribuí com a organização visual das interfaces.",
+        "skills": [
+          "Vue.js",
+          "Nuxt",
+          "Laravel",
+          "MySQL",
+          "Figma"
+        ]
+      }
+    }
+  },
+
+  "projects": {
+    "title": "Projetos",
+    "cta": "Ver mais no GitHub",
+    "climatiza": {
+      "alt": "Página inicial do site da Climatiza",
+      "description_part1": "Site institucional e sistema de gestão para a",
+      "description_part2": ", empresa de climatização e refrigeração de Umuarama. Desenvolvi o projeto de ponta a ponta: front-end em Nuxt e API em Laravel, com painel administrativo que controla todo o conteúdo do site e a operação da empresa.",
+      "item1": "Site com catálogo, serviços, portfólio, blog e simulador de BTUs, otimizado para SEO",
+      "item2": "Ordens de serviço, clientes, financeiro, comissões e relatórios com gráficos",
+      "item3": "Emissão de NFS-e pela API nacional com certificado A1 e processamento em fila",
+      "item4": "Testes automatizados com PHPUnit e Playwright"
+    },
+    "tech": "Tecnologias usadas"
+  },
+
+  "contact": {
+    "title": "Contato",
+    "description": "Tem um projeto, uma vaga ou quer trocar uma ideia? Me chama por qualquer um dos canais abaixo.",
+    "whatsapp": "Enviar mensagem",
+    "resume": "Baixar currículo"
+  },
+
+  "seo": {
+    "description": "Portfólio de Nathan Henrick, desenvolvedor Full Stack com Vue, Nuxt e Laravel. Projetos, experiência e contato."
+  },
+
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  }
+}
