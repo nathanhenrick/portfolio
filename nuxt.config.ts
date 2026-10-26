@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     "@nuxt/fonts",
     "@nuxtjs/color-mode",
+    "@vercel/analytics",
   ],
   css: ["@/assets/css/global.css"],
 
