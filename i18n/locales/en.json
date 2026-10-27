@@ -86,7 +86,18 @@
       "item3": "Service invoice (NFS-e) issuing through Brazil's national API, with A1 certificate and queue processing",
       "item4": "Automated tests with PHPUnit and Playwright"
     },
-    "tech": "Technologies used"
+    "tech": "Technologies used",
+    "pizza": {
+      "title": "Pizza Builder",
+      "description": "Web app for pizzerias where customers build their pizza exactly how they want it and send the finished order through WhatsApp, no sign-up needed.",
+      "item1": "3D pizza built with Three.js that you can spin with your finger, split into up to 4 flavors",
+      "item2": "Sizes, stuffed crusts and drinks with the price calculated instantly",
+      "item3": "Order summary sent straight to the pizzeria's WhatsApp",
+      "item4": "Built mobile-first",
+      "alt": "Cover of the Lancelot Pizzas presentation video",
+      "watch": "Watch the presentation video",
+      "close": "Close video"
+    }
   },
 
   "contact": {

@@ -57,8 +57,18 @@ ul.list li:before {
   margin-left: 1rem;
 }
 
+/* Capa dos projetos: mesmo tamanho em todos os cards, sem encolher no flex */
 .project-cover {
+  width: 100%;
   max-width: 20rem;
+  flex-shrink: 0;
+  aspect-ratio: 8 / 5;
+}
+
+.project-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 *:focus-visible {

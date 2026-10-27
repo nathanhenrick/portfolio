@@ -86,7 +86,18 @@
       "item3": "Emissão de NFS-e pela API nacional com certificado A1 e processamento em fila",
       "item4": "Testes automatizados com PHPUnit e Playwright"
     },
-    "tech": "Tecnologias usadas"
+    "tech": "Tecnologias usadas",
+    "pizza": {
+      "title": "Montador de Pizza",
+      "description": "Aplicativo web para pizzarias em que o cliente monta a pizza do jeito que quiser e envia o pedido pronto pelo WhatsApp, sem precisar de cadastro.",
+      "item1": "Pizza em 3D feita com Three.js que gira com o dedo, dividida em até 4 sabores",
+      "item2": "Tamanhos, bordas recheadas e bebidas com o preço calculado na hora",
+      "item3": "Resumo do pedido enviado direto para o WhatsApp da pizzaria",
+      "item4": "Desenvolvido mobile-first",
+      "alt": "Capa do vídeo de apresentação do Lancelot Pizzas",
+      "watch": "Assistir ao vídeo de apresentação",
+      "close": "Fechar vídeo"
+    }
   },
 
   "contact": {

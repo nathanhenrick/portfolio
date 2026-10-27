@@ -195,6 +195,73 @@
             </div>
           </article>
         </div>
+
+        <!-- A capa abre o vídeo de apresentação num modal -->
+        <div v-reveal class="p-4">
+          <article class="container flex flex-col md:flex-row gap-10">
+            <button
+              type="button"
+              class="project-cover video-cover relative self-center md:self-start"
+              :aria-label="$t('projects.pizza.watch')"
+              @click="openPizzaVideo"
+            >
+              <NuxtImg
+                format="webp"
+                width="320"
+                height="200"
+                densities="x1 x2"
+                src="images/lancelot-pizzas-capa.jpg"
+                :alt="$t('projects.pizza.alt')"
+              />
+              <span class="play-badge absolute inset-0 flex items-center justify-center">
+                <Icon name="mdi:play-circle" size="64" />
+              </span>
+            </button>
+
+            <dialog
+              ref="pizzaDialog"
+              class="video-dialog"
+              :aria-label="$t('projects.pizza.watch')"
+              @close="pizzaVideo?.pause()"
+              @click.self="pizzaDialog?.close()"
+            >
+              <form method="dialog" class="flex justify-end">
+                <button type="submit" class="video-close" :aria-label="$t('projects.pizza.close')">
+                  <Icon name="mdi:close" size="28" />
+                </button>
+              </form>
+              <video
+                ref="pizzaVideo"
+                src="/videos/lancelot-pizzas.mp4"
+                poster="/images/lancelot-pizzas-capa.jpg"
+                preload="none"
+                controls
+                playsinline
+              />
+            </dialog>
+
+            <div class="flex flex-col">
+              <h3 class="text-3xl sm:text-4xl font-semibold">
+                {{ $t("projects.pizza.title") }}
+              </h3>
+              <p class="text-[var(--muted)] font-light">
+                {{ $t("projects.pizza.description") }}
+              </p>
+              <ul class="list">
+                <li>{{ $t("projects.pizza.item1") }}</li>
+                <li>{{ $t("projects.pizza.item2") }}</li>
+                <li>{{ $t("projects.pizza.item3") }}</li>
+                <li>{{ $t("projects.pizza.item4") }}</li>
+              </ul>
+              <ul class="flex flex-wrap gap-2 mt-5" :aria-label="$t('projects.tech')">
+                <li v-for="tech in pizzaStack" :key="tech.label" class="tag">
+                  <Icon :name="tech.icon" size="16" />
+                  {{ tech.label }}
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
       </section>
 
       <div class="w-full flex justify-center">
@@ -347,6 +414,24 @@ const climatizaStack = [
   { label: "Playwright", icon: "simple-icons:playwright" },
 ];
 
+const pizzaStack = [
+  { label: "Nuxt", icon: "simple-icons:nuxtdotjs" },
+  { label: "Vue", icon: "simple-icons:vuedotjs" },
+  { label: "TypeScript", icon: "simple-icons:typescript" },
+  { label: "Pinia", icon: "simple-icons:pinia" },
+  { label: "Three.js", icon: "simple-icons:threedotjs" },
+  { label: "Laravel", icon: "simple-icons:laravel" },
+  { label: "MySQL", icon: "simple-icons:mysql" },
+];
+
+const pizzaDialog = ref(null);
+const pizzaVideo = ref(null);
+
+function openPizzaVideo() {
+  pizzaDialog.value.showModal();
+  pizzaVideo.value.play();
+}
+
 const experience = [
   { key: "centrion", roles: ["fullstack", "intern"] },
 ];
@@ -409,6 +494,54 @@ useSeo();
     opacity: 1;
     pointer-events: auto;
   }
+}
+
+/* Capa com vídeo: o play aparece por cima da imagem */
+.video-cover {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.play-badge {
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.35);
+  transition: background 0.3s ease;
+}
+
+.play-badge .iconify {
+  transition: transform 0.3s ease;
+}
+
+.video-cover:hover .play-badge,
+.video-cover:focus-visible .play-badge {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.video-cover:hover .play-badge .iconify {
+  transform: scale(1.1);
+}
+
+.video-dialog {
+  width: min(92vw, 1100px);
+  padding: 0;
+  margin: auto;
+  border: none;
+  background: transparent;
+}
+
+.video-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.video-dialog video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.video-close {
+  padding: 0.5rem;
+  color: var(--white);
 }
 
 /* Compensa a navbar fixa ao rolar até a seção */
