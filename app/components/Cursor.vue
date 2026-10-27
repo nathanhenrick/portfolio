@@ -96,6 +96,21 @@ onBeforeUnmount(() => {
   * {
     cursor: none !important;
   }
+
+  /* Modal aberto fica na camada de cima, acima da bolinha: dentro dele vale o cursor do sistema */
+  dialog[open],
+  dialog[open] *,
+  dialog[open]::backdrop {
+    cursor: auto !important;
+  }
+
+  dialog[open] :is(a, button, summary, label, [role="button"]) {
+    cursor: pointer !important;
+  }
+
+  body:has(dialog[open]) .cursor {
+    opacity: 0;
+  }
 }
 
 @media not ((hover: hover) and (pointer: fine)) {

@@ -31,6 +31,11 @@ html.light {
   padding: 0;
 }
 
+/* Com um modal aberto, a página atrás não rola nem mostra a barra de rolagem */
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
 
 a.link {
   color: var(--secondary);
