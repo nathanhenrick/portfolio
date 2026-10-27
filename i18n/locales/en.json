@@ -96,7 +96,17 @@
       "item4": "Built mobile-first",
       "alt": "Cover of the Lancelot Pizzas presentation video",
       "watch": "Watch the presentation video",
-      "close": "Close video"
+      "close": "Close video",
+      "docker": "Run with Docker",
+      "github": "Code on GitHub",
+      "dockerTitle": "Run the project with Docker",
+      "dockerIntro": "You need Git and Docker installed. In the terminal, clone the site and the API side by side and start everything:",
+      "copy": "Copy commands",
+      "copied": "Copied!",
+      "dockerAfter": "When it finishes, open",
+      "dockerAdmin": "Admin panel at /login with",
+      "dockerDocs": "See the full instructions on GitHub",
+      "dockerClose": "Close"
     }
   },
 

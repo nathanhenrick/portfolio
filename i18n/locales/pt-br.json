@@ -96,7 +96,17 @@
       "item4": "Desenvolvido mobile-first",
       "alt": "Capa do vídeo de apresentação do Lancelot Pizzas",
       "watch": "Assistir ao vídeo de apresentação",
-      "close": "Fechar vídeo"
+      "close": "Fechar vídeo",
+      "docker": "Rodar com Docker",
+      "github": "Código no GitHub",
+      "dockerTitle": "Rodar o projeto com Docker",
+      "dockerIntro": "Precisa do Git e do Docker instalados. No terminal, clone o site e a API lado a lado e suba tudo:",
+      "copy": "Copiar comandos",
+      "copied": "Copiado!",
+      "dockerAfter": "Quando terminar, abra",
+      "dockerAdmin": "Painel em /login com",
+      "dockerDocs": "Ver as instruções completas no GitHub",
+      "dockerClose": "Fechar"
     }
   },
 

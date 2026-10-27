@@ -259,7 +259,52 @@
                   {{ tech.label }}
                 </li>
               </ul>
+              <div class="flex flex-wrap gap-3 mt-6">
+                <button type="button" class="project-btn project-btn--primary" @click="dockerDialog?.showModal()">
+                  <Icon name="simple-icons:docker" size="18" />
+                  {{ $t("projects.pizza.docker") }}
+                </button>
+                <a :href="PIZZA_REPO" target="_blank" rel="noopener" class="project-btn">
+                  <Icon name="simple-icons:github" size="18" />
+                  {{ $t("projects.pizza.github") }}
+                </a>
+              </div>
             </div>
+
+            <dialog
+              ref="dockerDialog"
+              class="docker-dialog"
+              aria-labelledby="docker-titulo"
+              @click.self="dockerDialog?.close()"
+            >
+              <div class="flex items-start justify-between gap-4">
+                <h4 id="docker-titulo" class="text-2xl font-semibold">{{ $t("projects.pizza.dockerTitle") }}</h4>
+                <form method="dialog">
+                  <button type="submit" class="docker-close" :aria-label="$t('projects.pizza.dockerClose')">
+                    <Icon name="mdi:close" size="24" />
+                  </button>
+                </form>
+              </div>
+              <p class="text-[var(--muted)] font-light mt-3">
+                {{ $t("projects.pizza.dockerIntro") }}
+              </p>
+              <pre class="docker-comandos"><code>{{ DOCKER_COMANDOS }}</code></pre>
+              <button type="button" class="project-btn project-btn--primary" @click="copiarComandos">
+                <Icon :name="copiado ? 'mdi:check' : 'mdi:content-copy'" size="18" />
+                {{ copiado ? $t("projects.pizza.copied") : $t("projects.pizza.copy") }}
+              </button>
+              <p class="text-[var(--muted)] font-light mt-5">
+                {{ $t("projects.pizza.dockerAfter") }}
+                <a class="link" href="http://localhost:3000" target="_blank" rel="noopener">localhost:3000</a>.
+                {{ $t("projects.pizza.dockerAdmin") }}
+                <code>admin@montapizza.local</code> / <code>montapizza123</code>.
+              </p>
+              <p class="font-light mt-3">
+                <a class="link" :href="`${PIZZA_REPO}#rodar-com-docker`" target="_blank" rel="noopener">
+                  {{ $t("projects.pizza.dockerDocs") }}
+                </a>
+              </p>
+            </dialog>
           </article>
         </div>
       </section>
@@ -432,6 +477,23 @@ function openPizzaVideo() {
   pizzaVideo.value.play();
 }
 
+const PIZZA_REPO = "https://github.com/nathanhenrick/lancelotPizzas";
+const DOCKER_COMANDOS = [
+  "git clone https://github.com/nathanhenrick/lancelotPizzas.git",
+  "git clone https://github.com/nathanhenrick/backendLancelotPizzas.git",
+  "cd lancelotPizzas",
+  "docker compose up --build",
+].join("\n");
+
+const dockerDialog = ref(null);
+const copiado = ref(false);
+
+async function copiarComandos() {
+  await navigator.clipboard.writeText(DOCKER_COMANDOS);
+  copiado.value = true;
+  setTimeout(() => (copiado.value = false), 2000);
+}
+
 const experience = [
   { key: "centrion", roles: ["fullstack", "intern"] },
 ];
@@ -542,6 +604,66 @@ useSeo();
 .video-close {
   padding: 0.5rem;
   color: var(--white);
+}
+
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--primary);
+  color: var(--fg);
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.project-btn:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.project-btn--primary {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.project-btn--primary:hover {
+  background: var(--fg);
+  border-color: var(--fg);
+  color: var(--bg);
+}
+
+.docker-dialog {
+  width: min(92vw, 40rem);
+  margin: auto;
+  padding: 1.5rem;
+  border: 1px solid rgba(var(--primary-rgb), 0.5);
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.docker-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.docker-close {
+  padding: 0.25rem;
+  color: var(--fg);
+}
+
+.docker-comandos {
+  margin: 1.25rem 0;
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  background: rgba(var(--fg-rgb), 0.06);
+  border-left: 3px solid var(--primary);
+}
+
+.docker-dialog code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
 /* Compensa a navbar fixa ao rolar até a seção */
