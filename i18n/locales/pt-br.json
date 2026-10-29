@@ -88,7 +88,7 @@
     },
     "tech": "Tecnologias usadas",
     "pizza": {
-      "title": "Montador de Pizza",
+      "title": "Lancelot Pizzas",
       "description": "Aplicativo web para pizzarias em que o cliente monta a pizza do jeito que quiser e envia o pedido pronto pelo WhatsApp, sem precisar de cadastro.",
       "item1": "Pizza em 3D feita com Three.js que gira com o dedo, dividida em até 4 sabores",
       "item2": "Tamanhos, bordas recheadas e bebidas com o preço calculado na hora",

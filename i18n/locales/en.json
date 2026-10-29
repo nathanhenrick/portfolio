@@ -88,7 +88,7 @@
     },
     "tech": "Technologies used",
     "pizza": {
-      "title": "Pizza Builder",
+      "title": "Lancelot Pizzas",
       "description": "Web app for pizzerias where customers build their pizza exactly how they want it and send the finished order through WhatsApp, no sign-up needed.",
       "item1": "3D pizza built with Three.js that you can spin with your finger, split into up to 4 flavors",
       "item2": "Sizes, stuffed crusts and drinks with the price calculated instantly",
